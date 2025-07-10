@@ -11,12 +11,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9613dd0 (Fix CI path after moving project to root)
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Node.js
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9613dd0 (Fix CI path after moving project to root)
         uses: actions/setup-node@v3
         with:
           node-version: 18
