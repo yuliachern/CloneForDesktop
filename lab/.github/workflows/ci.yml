@@ -9,6 +9,11 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    defaults: 
+        run:
+            working-directory: lab
+
+
 
     steps:
       - name: Checkout code
@@ -21,7 +26,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: lab
+        
 
       - name: Start Redis
         run: |
@@ -32,4 +37,4 @@ jobs:
 
       - name: Run tests
         run: npm test
-        working-directory: lab
+       
