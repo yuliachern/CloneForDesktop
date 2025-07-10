@@ -21,6 +21,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: lab
 
       - name: Start Redis
         run: |
@@ -28,6 +29,8 @@ jobs:
           sudo apt-get install -y redis-server
           sudo systemctl start redis
           redis-cli ping
+        working-directory: lab
 
       - name: Run tests
         run: npm test
+        working-directory: lab
